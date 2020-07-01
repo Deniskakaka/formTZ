@@ -1,0 +1,287 @@
+@import "./breakpoints.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 608px;
+  height: 727px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-top: 51px;
+  margin-bottom: 30px;
+
+  @include for-medium-up {
+    width: 90%;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  @include for-small-up {
+    width: 320px;
+  }
+
+  & > label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 496px;
+    height: 48px;
+    border: 0.65015px solid #636363;
+    border-radius: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    cursor: pointer;
+
+    @include for-medium-up {
+      width: 360px;
+    }
+
+    @include for-small-up {
+      width: 90%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    & p,
+    & span {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      color: #a7a7a7;
+    }
+
+    & span {
+      color: #333333;
+    }
+  }
+
+  & button {
+    width: 144px;
+    height: 56px;
+    background: #da3f5b;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-left: 56px;
+    align-self: flex-start;
+    cursor: pointer;
+
+    @include for-medium-up {
+      align-self: center;
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.form-firstPart {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 55px;
+  margin-bottom: 40px;
+  width: 90%;
+
+  @include for-medium-up {
+    flex-direction: column;
+  }
+
+  & label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #636363;
+
+    @include for-medium-up {
+      width: 90%;
+    }
+
+    & span {
+      position: absolute;
+      right: 30px;
+      color: #f15557;
+
+      @include for-medium-up {
+        left: 125px;
+      }
+    }
+  }
+
+  & label:last-child {
+    & p {
+      bottom: -50px;
+    }
+  }
+
+  &__nameCompany {
+    width: 264px;
+    height: 48px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: none;
+    margin-top: 8px;
+    padding-left: 16px;
+    outline: none;
+
+    @include for-medium-up {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+
+  &__NumberOfPeople {
+    width: 162px;
+    height: 48px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: none;
+    margin-top: 8px;
+    padding-left: 16px;
+    outline: none;
+
+    @include for-medium-up {
+      width: 100%;
+    }
+  }
+
+  & input::placeholder {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #a7a7a7;
+  }
+
+  & p {
+    position: absolute;
+    bottom: -35px;
+    color: #f15557;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+  }
+}
+
+.form-secondPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include for-medium-up {
+    width: 90%;
+  }
+
+  & label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #636363;
+
+    @include for-medium-up {
+      width: 90%;
+    }
+
+    & span {
+      position: absolute;
+      left: 100px;
+      color: #f15557;
+    }
+  }
+
+  & label:last-child {
+    & span {
+      left: 85px;
+    }
+    & p {
+      bottom: 0;
+    }
+  }
+
+  &__business {
+    width: 488px;
+    height: 48px;
+    padding-left: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #f9f9f9;
+    margin-bottom: 40px;
+    margin-top: 8px;
+
+    @include for-medium-up {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    resize: none;
+    width: 496px;
+    height: 168px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: none;
+    margin-top: 5.81px;
+    margin-bottom: 40px;
+    padding-top: 10px;
+    padding-left: 16px;
+    outline: none;
+
+    @include for-medium-up {
+      width: 100%;
+      height: 140px;
+      margin-bottom: 20px;
+    }
+
+    &::placeholder {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      color: #a7a7a7;
+    }
+  }
+
+  & input::placeholder {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #a7a7a7;
+  }
+
+  & p {
+    position: absolute;
+    bottom: 0;
+    color: #f15557;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+  }
+}
+
+.form-quantityFiles {
+  display: none;
+}
+
+.red {
+  border: 1px solid #f15557;
+}

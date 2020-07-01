@@ -1,0 +1,103 @@
+@import "./breakpoints.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: linear-gradient(
+    233.1deg,
+    #216190 19.65%,
+    #0834d0 81.25%
+  );
+  min-height: 100vh;
+  width: 100%;
+}
+
+.tableOfContents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include for-medium-up{
+    width: 100%;
+  }
+
+  h1 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 64px;
+    color: #ffffff;
+
+    @include for-medium-up {
+      font-size: 30px;
+    }
+
+    @include for-small-up {
+        text-align: center;
+    }
+  }
+}
+
+.tableOfContents-choice {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 492px;
+
+  @include for-medium-up {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include for-small-up {
+      width: 100%;
+  }
+
+  & div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #1e34a5;
+    text-align: center;
+    line-height: 30px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+
+    @include for-small-up  {
+      width: 20px;
+      height: 20px;
+      font-size: 11px;
+      line-height: 20px;
+    }
+  }
+
+  & p {
+    background: #e8e8e8;
+    opacity: 0.2;
+    border-radius: 8px;
+    height: 1px;
+    flex-grow: 1;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  & div:last-child {
+    background-color: #da3f5b;
+  }
+}
