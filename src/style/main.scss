@@ -28,7 +28,7 @@ body {
   flex-direction: column;
   align-items: center;
 
-  @include for-medium-up{
+  @include for-medium-up {
     width: 100%;
   }
 
@@ -45,7 +45,7 @@ body {
     }
 
     @include for-small-up {
-        text-align: center;
+      text-align: center;
     }
   }
 }
@@ -63,7 +63,7 @@ body {
   }
 
   @include for-small-up {
-      width: 100%;
+    width: 100%;
   }
 
   & div {
@@ -79,7 +79,7 @@ body {
     font-size: 18px;
     color: #ffffff;
 
-    @include for-small-up  {
+    @include for-small-up {
       width: 20px;
       height: 20px;
       font-size: 11px;

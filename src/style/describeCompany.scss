@@ -1,0 +1,111 @@
+.form-secondPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    @include for-medium-up {
+      width: 90%;
+    }
+  
+    & label {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      font-family: Open Sans;
+      font-size: 14px;
+      color: #636363;
+  
+      @include for-medium-up {
+        width: 90%;
+      }
+  
+      & span {
+        position: absolute;
+        left: 100px;
+        color: #f15557;
+      }
+    }
+  
+    & label:last-child {
+      & span {
+        left: 85px;
+      }
+      & p {
+        bottom: 0;
+  
+        @include for-small-up {
+          bottom: -2px;
+        }
+      }
+    }
+  
+    &__business {
+      width: 488px;
+      height: 48px;
+      padding-left: 8px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      background-color: #f9f9f9;
+      margin-bottom: 40px;
+      margin-top: 8px;
+  
+      @include for-medium-up {
+        width: 100%;
+      }
+    }
+  
+    &__description {
+      resize: none;
+      width: 496px;
+      height: 168px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      border: none;
+      margin-top: 5.81px;
+      margin-bottom: 40px;
+      padding-top: 10px;
+      padding-left: 16px;
+      outline: none;
+  
+      @include for-medium-up {
+        width: 100%;
+        height: 140px;
+        margin-bottom: 30px;
+      }
+  
+      @include for-small-up {
+        margin-bottom: 40px;
+      }
+  
+      &::placeholder {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: #a7a7a7;
+      }
+    }
+  
+    & input::placeholder {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      color: #a7a7a7;
+    }
+  
+    & p {
+      position: absolute;
+      bottom: 0;
+      color: #f15557;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+  
+      @include for-medium-up {
+        bottom: 8px;
+      }
+    }
+  }

@@ -12,7 +12,7 @@ function DataCompany
         setCheckNumber
     }) {
 
-    function onChancheName (event) {
+    function onChancheName(event) {
         setName(event.target.value);
     }
 
@@ -20,17 +20,13 @@ function DataCompany
         setEmptyName("");
     }
 
-    function onChangeNumberPeople (event) {
+    function onChangeNumberPeople(event) {
         setNumberPeople(event.target.value);
     }
 
     function onBlurNumberPeople(event) {
-        if (+event.target.value < 1 || +event.target.value > 99) {
-            setCheckNumber("Please enter number from 1 to 99");
-        }
-        if (event.target.value === "") {
-            setCheckNumber("This field in required");
-        }
+        if (+event.target.value < 1 || +event.target.value > 99) setCheckNumber("Please enter number from 1 to 99");
+        if (event.target.value === "") setCheckNumber("This field in required");
     }
 
     function focusNumberPeople() {
@@ -64,15 +60,15 @@ function DataCompany
     );
 }
 
-DataCompany.propTypes =  {
-   name: PropTypes.string,
-   setName: PropTypes.func,
-   emptyName: PropTypes.string,
-   setEmptyName: PropTypes.func,
-   number: PropTypes.string,
-   setNumberPeople: PropTypes.func,
-   checkNumber: PropTypes.string,
-   setCheckNumber: PropTypes.func 
+DataCompany.propTypes = {
+    name: PropTypes.string,
+    setName: PropTypes.func,
+    emptyName: PropTypes.string,
+    setEmptyName: PropTypes.func,
+    number: PropTypes.string,
+    setNumberPeople: PropTypes.func,
+    checkNumber: PropTypes.string,
+    setCheckNumber: PropTypes.func
 };
 
 export default DataCompany;

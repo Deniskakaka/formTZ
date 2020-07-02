@@ -37,7 +37,7 @@ function Form() {
         if (description === "") setCheckDescription("This field in required");
     }
 
-    function count (event) {
+    function count(event) {
         setQuantity(event.target.files.length);
     }
 
@@ -64,7 +64,7 @@ function Form() {
                 setCheckDescription={setCheckDescription}
             />
             <label>
-            <div><i className="fas fa-folder-plus icon"></i> <span>Add file as attachment</span></div>
+                <div><i className="fas fa-folder-plus icon"></i> <span>Add file as attachment</span></div>
                 <input type="file" multiple onChange={count} className="form-quantityFiles"></input>
                 <p>{`${quantity} files attached`}</p>
             </label>

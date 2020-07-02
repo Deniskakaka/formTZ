@@ -1,6 +1,6 @@
 import React from "react";
-import "./style/main.scss";
-import Form from "./form/Form.jsx";
+import "../style/main.scss";
+import Form from "../components/Form.jsx";
 
 function App() {
     return (
@@ -15,7 +15,7 @@ function App() {
                     <div>3</div>
                 </div>
             </div>
-            <Form/>
+            <Form />
         </div>
     );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function DescribeCompany
-    ({  business,
+    ({ business,
         setBusiness,
         emptyBusiness,
         setEmptyBusiness,
