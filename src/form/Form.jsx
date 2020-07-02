@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import FirstPart from "./FirstPart.jsx";
-import SecondPart from "./SecondPart.jsx";
+import DataCompany from "./DataCompany.jsx";
+import DescribeCompany from "./DescribeCompany.jsx";
 import "../style/form.scss";
 
 function Form() {
@@ -43,7 +43,7 @@ function Form() {
 
     return (
         <form onSubmit={submit} className="form">
-            <FirstPart
+            <DataCompany
                 name={nameCompany}
                 setName={setNameCompany}
                 emptyName={emptyName}
@@ -53,7 +53,7 @@ function Form() {
                 checkNumber={checkNumber}
                 setCheckNumber={setCheckNumber}
             />
-            <SecondPart
+            <DescribeCompany
                 business={business}
                 setBusiness={setBusiness}
                 emptyBusiness={emptyBusiness}
