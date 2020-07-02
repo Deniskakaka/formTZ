@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function SecondPart
-    ({ business,
+function DescribeCompany
+    ({  business,
         setBusiness,
         emptyBusiness,
         setEmptyBusiness,
@@ -13,31 +14,31 @@ function SecondPart
 
     function onChangeBusiness(event) {
         setBusiness(event.target.value);
-    };
+    }
 
     function onBlurBusiness(event) {
         if (event.target.value === "") {
-            setEmptyBusiness("This field in required")
+            setEmptyBusiness("This field in required");
         }
-    };
+    }
 
     function onFocusBusiness() {
         setEmptyBusiness("");
-    };
+    }
 
     function onChangeDescription(event) {
         setDescription(event.target.value);
-    };
+    }
 
     function onBlurDescription(event) {
         if (event.target.value === "") {
-            setCheckDescription("This field in required")
+            setCheckDescription("This field in required");
         }
-    };
+    }
 
     function onFocusDescription() {
         setCheckDescription("");
-    };
+    }
 
     return (
         <div className="form-secondPart">
@@ -63,7 +64,18 @@ function SecondPart
                 <p>{checkDescription}</p>
             </label>
         </div>
-    )
+    );
+}
+
+DescribeCompany.propTypes = {
+    business: PropTypes.string,
+    setBusiness: PropTypes.func,
+    emptyBusiness: PropTypes.string,
+    setEmptyBusiness: PropTypes.func,
+    description: PropTypes.string,
+    setDescription: PropTypes.func,
+    checkDescription: PropTypes.string,
+    setCheckDescription: PropTypes.func
 };
 
-export default SecondPart;
+export default DescribeCompany;

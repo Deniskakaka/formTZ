@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
-function FirstPart
+function DataCompany
     ({ name,
         setName,
         emptyName,
@@ -11,30 +12,30 @@ function FirstPart
         setCheckNumber
     }) {
 
-    function onChancheName(event) {
+    function onChancheName (event) {
         setName(event.target.value);
-    };
+    }
 
     function focusName() {
-        setEmptyName("")
-    };
+        setEmptyName("");
+    }
 
-    function onChangeNumberPeople(event) {
-        setNumberPeople(event.target.value)
-    };
+    function onChangeNumberPeople (event) {
+        setNumberPeople(event.target.value);
+    }
 
     function onBlurNumberPeople(event) {
         if (+event.target.value < 1 || +event.target.value > 99) {
-            setCheckNumber("Please enter number from 1 to 99")
+            setCheckNumber("Please enter number from 1 to 99");
         }
         if (event.target.value === "") {
-            setCheckNumber("This field in required")
+            setCheckNumber("This field in required");
         }
-    };
+    }
 
     function focusNumberPeople() {
-        setCheckNumber("")
-    };
+        setCheckNumber("");
+    }
 
     return (
         <div className="form-firstPart">
@@ -60,7 +61,18 @@ function FirstPart
                 <p>{checkNumber}</p>
             </label>
         </div>
-    )
+    );
+}
+
+DataCompany.propTypes =  {
+   name: PropTypes.string,
+   setName: PropTypes.func,
+   emptyName: PropTypes.string,
+   setEmptyName: PropTypes.func,
+   number: PropTypes.string,
+   setNumberPeople: PropTypes.func,
+   checkNumber: PropTypes.string,
+   setCheckNumber: PropTypes.func 
 };
 
-export default FirstPart;
+export default DataCompany;

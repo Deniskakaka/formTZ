@@ -1,6 +1,7 @@
 import React from "react";
 import "./style/main.scss";
 import Form from "./form/Form.jsx";
+
 function App() {
     return (
         <div className="page">
@@ -16,7 +17,7 @@ function App() {
             </div>
             <Form/>
         </div>
-    )
-};
+    );
+}
 
 export default App;
