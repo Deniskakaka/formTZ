@@ -27,6 +27,9 @@ function FirstPart
         if (+event.target.value < 1 || +event.target.value > 99) {
             setCheckNumber("Please enter number from 1 to 99")
         }
+        if (event.target.value === "") {
+            setCheckNumber("This field in required")
+        }
     };
 
     function focusNumberPeople() {

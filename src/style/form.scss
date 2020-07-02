@@ -99,6 +99,10 @@
     flex-direction: column;
   }
 
+  @include for-small-up {
+    margin-top: 35px;
+  }
+
   & label {
     position: relative;
     display: flex;
@@ -125,6 +129,14 @@
   & label:last-child {
     & p {
       bottom: -50px;
+      
+      @include for-medium-up {
+        bottom: -30px;
+      }
+
+      @include for-small-up {
+        bottom: -35px;
+      }
     }
   }
 
@@ -175,6 +187,14 @@
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
+
+    @include for-medium-up {
+      bottom: -2px;
+    }
+
+    @include for-small-up {
+      bottom: -2px;
+    }
   }
 }
 
@@ -212,6 +232,10 @@
     }
     & p {
       bottom: 0;
+
+      @include for-small-up {
+        bottom: -2px;
+      }
     }
   }
 
@@ -247,8 +271,12 @@
     @include for-medium-up {
       width: 100%;
       height: 140px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
+
+      @include for-small-up {
+        margin-bottom: 40px;
+      }
 
     &::placeholder {
       font-family: Open Sans;
@@ -275,6 +303,10 @@
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
+
+    @include for-medium-up {
+      bottom: 8px;
+    }
   }
 }
 
