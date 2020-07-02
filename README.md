@@ -7,6 +7,4 @@
   <li><a href="https://reactjs.org/">React</li>
 </ol>
 
-> run the test task locally on your computer, first clone the repository, 
-
->second the command line go to the project folder and run the local server with the command npm start
+> run the test task locally on your computer, first clone the repository, second the command line go to the project folder and run the local server with the command npm start
