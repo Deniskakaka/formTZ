@@ -17,7 +17,7 @@ function Form() {
 
     function submit(event) {
         event.preventDefault();
-        if (nameCompany !== "" && +numberPeople >= 1 && +numberPeople < 99 && business !== "" && description !== "") {
+        if (nameCompany && +numberPeople >= 1 && +numberPeople < 99 && business && description) {
             console.log({
                 nameCompany: nameCompany,
                 numberPeople: numberPeople,
@@ -36,8 +36,9 @@ function Form() {
         if (business === "") setEmptyBusiness("This field in required");
         if (nameCompany === "") setEmptyName("This field empty");
         if (description === "") setCheckDescription("This field in required");
+       
     }
-
+    
     return (
         <form onSubmit={submit} className="form">
             <DataCompany
