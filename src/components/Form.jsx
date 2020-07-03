@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DataCompany from "./DataCompany.jsx";
 import DescribeCompany from "./DescribeCompany.jsx";
+import InputFile from "./InputFile.jsx";
 import "../style/form.scss";
 
 function Form() {
@@ -37,10 +38,6 @@ function Form() {
         if (description === "") setCheckDescription("This field in required");
     }
 
-    function count(event) {
-        setQuantity(event.target.files.length);
-    }
-
     return (
         <form onSubmit={submit} className="form">
             <DataCompany
@@ -63,11 +60,7 @@ function Form() {
                 checkDescription={checkDescription}
                 setCheckDescription={setCheckDescription}
             />
-            <label>
-                <div><i className="fas fa-folder-plus icon"></i> <span>Add file as attachment</span></div>
-                <input type="file" multiple onChange={count} className="form-quantityFiles"></input>
-                <p>{`${quantity} files attached`}</p>
-            </label>
+            <InputFile quantity={quantity} setQuantity={setQuantity}/>
             <button type="submit">Submit</button>
         </form>
     );
