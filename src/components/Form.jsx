@@ -38,7 +38,7 @@ function Form() {
         if (description === "") setCheckDescription("This field in required");
        
     }
-    
+
     return (
         <form onSubmit={submit} className="form">
             <DataCompany
